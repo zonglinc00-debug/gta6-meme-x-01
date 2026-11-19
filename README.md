@@ -20,6 +20,21 @@ composited into the scene with code, not pasted as a sticker.
 
 Final image: `meme.jpg` (the post's first picture).
 
+## Alternates (same pipeline, pick the best before submitting)
+
+- `meme-cuck.jpg` — 「全网：Jason 被绿了！/ Jason：我只是和 Cal 挤了一张床」.
+  The joke's target is the wave of X users calling Jason a cuck, not any
+  claim about the plot: the real scene is only Jason waking up in the same
+  bed as his friend Cal. No infidelity is asserted; Lucia does not cheat
+  (Tomás is Jason and Lucia's son).
+- `meme-woke.jpg` — 「兄弟们，给女朋友买花算 woke 吗？」. From the
+  verified X post by @ExoGhost (2026-11-18) calling GTA 6 "woke slop …
+  made by women" over the "FLOWERS FOR A LADY" mission, and the viral
+  dunk quote-tweeting it: "fellas is it wokeslop to buy flowers for your
+  beautiful girlfriend."
+
+Exact post texts for all three are in `POST_TEXTS.md`.
+
 ## The post
 
 Posted on X from the public account `@kaimo0yxo`. Its text carries

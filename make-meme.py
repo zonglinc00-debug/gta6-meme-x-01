@@ -91,11 +91,15 @@ def draw_caption(canvas: Image.Image, text: str, position: str) -> None:
     font_size = 64
     font = load_font(font_size)
     max_width = TARGET_W - 80
-    lines = wrap_text(draw, text, font, max_width)
+    lines: list[str] = []
+    for part in text.split("\n"):
+        lines.extend(wrap_text(draw, part, font, max_width))
     while len(lines) > 2 and font_size > 40:  # keep it to two lines at most
         font_size -= 6
         font = load_font(font_size)
-        lines = wrap_text(draw, text, font, max_width)
+        lines = []
+        for part in text.split("\n"):
+            lines.extend(wrap_text(draw, part, font, max_width))
 
     line_height = round(font_size * 1.25)
     band_height = line_height * len(lines) + 36
