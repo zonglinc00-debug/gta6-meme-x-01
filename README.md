@@ -6,13 +6,15 @@ Entry for the make.fun bounty **"Post a GTA 6 meme on X"**
 
 ## The meme
 
-**Caption: 「牛逼啊，User，路边的GTA6都敢捡。」**
+**Caption: 「牛逼啊，User，路边捡的GTA6都敢戴。」**
 
 The joke is an adaptation of the Chinese Cyberpunk 2077 meme
-「牛逼啊，V，路边的黑超梦都敢捡。」— swapping the braindance chip for
-a glowing GTA 6 game box lying on a Vice City street, and V for the User.
-A scout vote over the live Chinese GTA 6 conversation on X picked this
-angle: the GTA 6 version of the format was blank across the whole
+「牛逼啊，V，路边捡的黑超梦都敢戴。」— Johnny Silverhand mock-praising V
+for daring to *wear* the sketchy black braindance picked up off the street
+(the viral Bilibili version is sharp1ce's, 505K views) — swapping the
+braindance for a glowing GTA 6 game box lying on a Vice City street, and V
+for the User. A scout vote over the live Chinese GTA 6 conversation on X
+picked this angle: the GTA 6 version of the format was blank across the whole
 internet, so originality is maximal. The base art is AI-generated with a
 swapped face model — an ordinary young man with glasses, not any game's
 character — and the make.fun ghost from https://make.fun/press/ is
@@ -32,8 +34,15 @@ Final image: `meme.jpg` (the post's first picture).
   made by women" over the "FLOWERS FOR A LADY" mission, and the viral
   dunk quote-tweeting it: "fellas is it wokeslop to buy flowers for your
   beautiful girlfriend."
+- `meme-tencent.jpg` — 「当GTA6出生在腾讯，首充6元送金枪。」. Built on a
+  satirical fake "GTA VI 国服" mobile-game UI (user-supplied base,
+  `tencent-base.jpg`, not redrawn): first-charge ¥6 for a legendary golden
+  pistol, 7-day login supercar, S1 pass, luxury monthly card, ¥68/¥328/¥648
+  gift packs — the joke is Tencent's recharge system firing a dozen payment
+  prompts the moment the game opens. Same pipeline: ghost composited in
+  code, caption overlaid in code.
 
-Exact post texts for all three are in `POST_TEXTS.md`.
+Exact post texts for all four are in `POST_TEXTS.md`.
 
 ## The post
 
@@ -54,7 +63,7 @@ caption in Noto Sans CJK Bold with a dark band so it stays readable when the
 judge shrinks the picture to 768×480.
 
 ```sh
-python3 make-meme.py --base base.png --out meme.jpg --text "牛逼啊，User，路边的GTA6都敢捡。"
+python3 make-meme.py --base base.png --out meme.jpg --text "牛逼啊，User，路边捡的GTA6都敢戴。"
 ```
 
 ## The program

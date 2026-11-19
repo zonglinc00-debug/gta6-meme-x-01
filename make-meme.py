@@ -85,17 +85,19 @@ def paste_ghost(canvas: Image.Image, corner: str, scale: float) -> None:
     canvas.paste(ghost, positions[corner], ghost)
 
 
-def draw_caption(canvas: Image.Image, text: str, position: str) -> None:
+def draw_caption(canvas: Image.Image, text: str, position: str,
+                 font_size: int = 64) -> None:
     """Caption on a translucent dark band, large white bold type."""
     draw = ImageDraw.Draw(canvas, "RGBA")
-    font_size = 64
     font = load_font(font_size)
     max_width = TARGET_W - 80
     lines: list[str] = []
     for part in text.split("\n"):
         lines.extend(wrap_text(draw, part, font, max_width))
-    while len(lines) > 2 and font_size > 40:  # keep it to two lines at most
-        font_size -= 6
+    while ((len(lines) > 2 or (lines and len(lines[-1]) <= 1))
+           and font_size > 40):  # keep it to two lines at most, and never
+        # strand a lone punctuation mark on its own line
+        font_size -= 4
         font = load_font(font_size)
         lines = []
         for part in text.split("\n"):
@@ -127,12 +129,14 @@ def main() -> int:
                                  "bottom-left", "bottom-right"])
     parser.add_argument("--ghost-scale", type=float, default=0.22,
                         help="ghost width as a fraction of 1200")
+    parser.add_argument("--font-size", type=int, default=64,
+                        help="caption font size in px (auto-shrinks if needed)")
     args = parser.parse_args()
 
     base = Image.open(args.base).convert("RGB")
     canvas = fit_cover(base, TARGET_W, TARGET_H).convert("RGBA")
     paste_ghost(canvas, args.ghost_corner, args.ghost_scale)
-    draw_caption(canvas, args.text, args.text_pos)
+    draw_caption(canvas, args.text, args.text_pos, args.font_size)
     canvas.convert("RGB").save(args.out, "JPEG", quality=92)
     print(f"wrote {args.out} ({TARGET_W}x{TARGET_H})")
     return 0

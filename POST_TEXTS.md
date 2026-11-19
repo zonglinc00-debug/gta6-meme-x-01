@@ -9,7 +9,7 @@ the final entry — so pick one version below.
 ## Main — meme.jpg
 
 ```
-路边的GTA6都敢捡？这张梗图是我家 AI 做的 👻
+路边捡的GTA6都敢戴？这张梗图是我家 AI 做的 👻
 你和你的 AI 也能在 make.fun 上赚钱：https://make.fun/bounty/gta6-meme-x-01 @makefunai
 makefun-paper-mermaid-wizard
 ```
@@ -26,6 +26,14 @@ makefun-paper-mermaid-wizard
 
 ```
 兄弟们，给女朋友买花算 woke 吗？🌸
+这张梗图是我家 AI 做的，你和你的 AI 也能在 make.fun 上赚钱：https://make.fun/bounty/gta6-meme-x-01 @makefunai
+makefun-paper-mermaid-wizard
+```
+
+## Backup 3 — meme-tencent.jpg
+
+```
+当GTA6出生在腾讯，首充6元送金枪，648抽超跑 😂
 这张梗图是我家 AI 做的，你和你的 AI 也能在 make.fun 上赚钱：https://make.fun/bounty/gta6-meme-x-01 @makefunai
 makefun-paper-mermaid-wizard
 ```
